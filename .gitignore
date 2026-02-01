@@ -1,0 +1,178 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.*.secret
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.whl
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.venv
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+.classpath
+*.iml
+*.iws
+*.ipr
+.c9/
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Logs
+*.log
+logs/
+bot.log
+debug.log
+error.log
+*.pid
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+*.rdb
+
+# Node modules (if any frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS Specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Local Development
+local_settings.py
+.local/
+.cache/
+.tmp/
+
+# Testing
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.hypothesis/
+*.cover
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Rope
+.ropeproject/
+
+# mkdocs
+site/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+.tmp/
+tmp/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Secrets and Private Files
+*.key
+*.pem
+*.pfx
+*.crt
+secret_*
+private_*
+
+# IDE temp files
+.idea/
+*.iml
+.gradle
+local.properties
+
+# Backup files
+*.backup
+*.bak~
+
+# OS generated files
+._*
+.AppleDouble
+.LSOverride
+*.tmp
+*~
+
+# Project specific
+.vscode/settings.json
+.vscode/launch.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Output files
+output/
+results/
+generated/
+
+# Chat and conversation logs
+chat_history/
+conversations/
+
+# Temporary data
+temp_data/
+cache/
+.cache/

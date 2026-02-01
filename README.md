@@ -1,4 +1,4 @@
-# 🚀 Reopfiy
+# 🚀 Repofiy
 
 An autonomous AI-powered Telegram bot that manages your GitHub repositories. Fix bugs, create features, make code changes, refactor code, and manage your entire codebase—all from your phone without needing a computer.
 

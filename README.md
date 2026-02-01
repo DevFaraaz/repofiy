@@ -24,6 +24,7 @@ An autonomous AI-powered Telegram bot that manages your GitHub repositories. Fix
 - **[QUICKSTART.md](QUICKSTART.md)** - 5-minute setup guide
 - **[USAGE_EXAMPLES.md](USAGE_EXAMPLES.md)** - Real-world usage examples
 - **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Common issues & solutions
+- **[DEPLOYMENT.md](docs/DEPLOYMENT.md)** - Railway and Vercel deployment guide
 
 ## 🚀 Quick Start
 
@@ -60,7 +61,7 @@ Replace `YOUR_BOT_TOKEN_HERE` with your actual bot token from BotFather.
 #### 3. Run the Bot
 
 ```bash
-python bugfixer_bot.py
+python repofiy_bot.py
 ```
 
 You should see: `🚀 Reopfiy Bot started!`
@@ -347,15 +348,18 @@ All providers are set up in Telegram with `/setai`. When you choose a provider, 
 
 ### Running in Production
 
-For production use, consider:
+For production deployment, see **[DEPLOYMENT.md](docs/DEPLOYMENT.md)** for detailed guides on:
 
-1. **Use a Process Manager**
+1. **Railway** - Recommended for continuous bots (auto-deploys from GitHub)
+2. **Vercel** - For serverless/API endpoints
+3. **Docker** - Self-hosted deployment
+4. **Systemd** - Process management on Linux
+
+Quick systemd example:
 ```bash
-# Using systemd
 sudo nano /etc/systemd/system/reopfiy.service
 ```
 
-Add:
 ```ini
 [Unit]
 Description=Reopfiy Telegram Bot
@@ -365,7 +369,7 @@ After=network.target
 Type=simple
 User=youruser
 WorkingDirectory=/path/to/reopfiy
-ExecStart=/usr/bin/python3 bugfixer_bot.py
+ExecStart=/usr/bin/python3 repofiy_bot.py
 Restart=always
 EnvironmentFile=/path/to/.env
 
@@ -373,30 +377,16 @@ EnvironmentFile=/path/to/.env
 WantedBy=multi-user.target
 ```
 
-Then:
+Then start:
 ```bash
 sudo systemctl enable reopfiy
 sudo systemctl start reopfiy
 ```
 
-2. **Use Docker**
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["python", "bugfixer_bot.py"]
-```
-
-3. **Logging**
-Check logs:
+**Logging:**
 ```bash
-# If using systemd
-journalctl -u reopfiy -f
-
-# Or check bot.log
-tail -f bot.log
+journalctl -u reopfiy -f  # systemd logs
+tail -f bot.log            # or check bot.log
 ```
 
 ### Customization
@@ -421,7 +411,7 @@ You can customize the bot:
 ## 🐛 Troubleshooting
 
 ### Bot doesn't respond
-- Check if the bot is running: `ps aux | grep bugfixer_bot.py`
+- Check if the bot is running: `ps aux | grep repofiy_bot.py`
 - Check logs for errors: `tail -f bot.log`
 - Verify your Telegram token is correct
 
